@@ -4,6 +4,7 @@ MILESTONES WITH MADDY — WEBSITE GUIDE
 FILES
   index.html      Home page
   portfolio.html  Full portfolio page (builds itself from photos.js)
+  pricing.html    Pricing page (packages, add-ons, FAQ)
   photos.js       <-- the ONE file you edit to add/rearrange photos
   styles.css      Colors, fonts, layout
   site.js         Behavior (menu, gallery, lightbox, form) — no need to touch
@@ -42,6 +43,11 @@ ADD A NEW CATEGORY (e.g. Families)
   and photo list. It appears on the portfolio page with its own jump link.
   (To also let people pick it on the inquiry form, add an <option> in the
   "Session type" list in index.html.)
+
+CHANGE PRICES
+  Open pricing.html and search for "$XXX" (packages) and "$XX" (add-ons).
+  Replace them with your real prices. Package details, add-ons and the FAQ
+  are plain text in the same file.
 
 CHANGE TEXT
   Open index.html in any text editor and edit the words between the tags.

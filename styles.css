@@ -127,3 +127,57 @@ body.lb-open { overflow:hidden; }
   .grid { --cols:1; }
 }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .photo img { transition:none; } }
+
+/* pricing page */
+.packages { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; align-items:stretch; }
+.pkg { display:flex; flex-direction:column; padding:30px 28px 28px; background:var(--card); border:1px solid var(--line); border-radius:3px; }
+.pkg h3 { font-family:Georgia,'Times New Roman',serif; font-size:28px; font-weight:400; margin:0 0 6px; letter-spacing:-.02em; }
+.pkg .for { color:var(--muted); font-size:13px; line-height:1.7; margin-bottom:22px; min-height:44px; }
+.price { font-family:Georgia,'Times New Roman',serif; font-size:46px; letter-spacing:-.04em; line-height:1; margin-bottom:4px; }
+.price small { font-family:Inter,'Avenir Next',Avenir,Arial,sans-serif; font-size:12px; letter-spacing:0; color:var(--muted); margin-right:6px; }
+.length { color:var(--muted); font-size:12px; margin-bottom:22px; }
+.pkg ul { list-style:none; margin:0 0 28px; padding:20px 0 0; border-top:1px solid var(--line); flex:1; }
+.pkg li { position:relative; padding-left:20px; margin-bottom:11px; font-size:13px; line-height:1.6; }
+.pkg li:before { content:""; position:absolute; left:0; top:.7em; width:10px; height:1px; background:var(--accent); }
+.pkg .btn { align-self:flex-start; }
+.pricing-note { margin-top:22px; color:var(--muted); font-size:13px; line-height:1.8; max-width:620px; }
+
+.addons { border-top:1px solid var(--line); max-width:760px; }
+.addon { display:flex; justify-content:space-between; align-items:baseline; gap:24px; padding:18px 0; border-bottom:1px solid var(--line); }
+.addon strong { font-weight:500; font-size:15px; }
+.addon p { margin:4px 0 0; color:var(--muted); font-size:13px; line-height:1.7; }
+.addon .amt { font-family:Georgia,'Times New Roman',serif; font-size:22px; white-space:nowrap; }
+
+.faq { max-width:760px; border-top:1px solid var(--line); }
+.faq details { border-bottom:1px solid var(--line); }
+.faq summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:20px 0; font-size:15px; }
+.faq summary::-webkit-details-marker { display:none; }
+.faq summary:after { content:"+"; font-size:22px; color:var(--accent); line-height:1; }
+.faq details[open] summary:after { content:"–"; }
+.faq details p { color:var(--muted); font-size:14px; line-height:1.9; margin:0 0 22px; max-width:620px; }
+
+@media(max-width:1100px) {
+  .packages { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .pkg .for { min-height:0; }
+}
+@media(max-width:600px) {
+  .packages { grid-template-columns:1fr; max-width:520px; }
+}
+@media(max-width:430px) {
+  .addon { flex-direction:column; gap:6px; }
+}
+
+/* bundles */
+.bundles { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.bundle { display:flex; flex-direction:column; align-items:flex-start; padding:30px 28px 28px; background:var(--card); border:1px solid var(--line); border-radius:3px; }
+.bundle .tag { margin-bottom:14px; padding:5px 9px; border:1px solid var(--accent); color:#657258; font-size:10px; letter-spacing:.14em; text-transform:uppercase; }
+.bundle h3 { font-family:Georgia,'Times New Roman',serif; font-size:26px; font-weight:400; margin:0 0 6px; letter-spacing:-.02em; }
+.bundle-sub { color:var(--muted); font-size:13px; margin-bottom:20px; }
+.bundle-price { display:flex; align-items:baseline; gap:14px; margin-bottom:6px; }
+.bundle-price .now { font-family:Georgia,'Times New Roman',serif; font-size:44px; letter-spacing:-.04em; line-height:1; }
+.bundle-price s { color:var(--muted); font-size:16px; }
+.save { color:#657258; font-size:12px; letter-spacing:.06em; margin-bottom:20px; }
+.bundle p { color:var(--muted); font-size:13px; line-height:1.8; margin-bottom:26px; flex:1; max-width:440px; }
+.sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+.addon .amt small { font-family:Inter,'Avenir Next',Avenir,Arial,sans-serif; font-size:12px; color:var(--muted); margin-right:6px; }
+@media(max-width:700px) { .bundles { grid-template-columns:1fr; } }
